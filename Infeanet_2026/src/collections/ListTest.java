@@ -1,9 +1,6 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 //List is an interface in JCF that stores elements in ordered sequence
 //Maintains insertions order.
@@ -31,7 +28,11 @@ public class ListTest {
         students.add("shruti");
         students.add("kunal");
         students.set(5, "kunal-nikam");
+        System.out.println(students);
+        System.out.println("students with sorting..");
 
+        Collections.sort(students);  //sort
+        System.out.println("students after sorting:--------------"+students);
 
         System.out.println(students.indexOf("apurva"));
         System.out.println("total no. of students: "+students.size());
