@@ -16,7 +16,8 @@ public class ListTest {
 //        List<String> students=new LinkedList<>(); //upcasting
         List<String> students=new Vector<>();  //since java 1.0.  oldest one.
         //Vector methods are synchronized.  Vector is thread safe where as ArrayList and LinkedList are not thread safe.
-
+        students.add(null);
+        students.add(null);
         students.add("ronak");
         students.add("Mandar");
         students.add("apurva");
