@@ -1,0 +1,153 @@
+=>Apache maven intro.
+=================
+Apache Maven: it is Build Automation Tool used to automate the build process of java applications.
+
+- tool that helps developes to create , build, test, package and deploy apps automatically.
+
+-open-source project managment and build automation tool developed by Apache s/w foundation.
+
+- Maven is developed by using java lanaguage.
+-we can use it with Spring boot, Spring , servlet, core java apps.
+
+Build:
+====
+we write java code, several steps before it comes an executes application.
+
+
+write code-->  compile  (byte code) --> run test cases  -->create jar/war --> deploy appln --> run on server
+
+--this complete process is called as build process.
+
+
+Manual Build Process:
+=================
+We create online banking app.
+without maven..    we have to do all above things manually.
+
+write code-->  compile  (byte code) javac *.java--> run test cases  -->create jar/war --> deploy appln --> run on server
+
+
+Build Automation:
+==============
+Instead of doing everything manually, Maven performs everything automatically.
+
+Maven introduced Standard Directory structure...
+
+
+
+
+What we can do by using maven tool?
+============================
+
+1. we can create standard project structure.
+
+2. Download required libraries. (spring, hibernate, redis, thymeleaf, web, dta jpa , kafka)
+
+3. Compile source code of the project.
+
+4. run unit test cases.
+
+5. package our app in the form of jar/war.
+
+6. easy CI/CD tool integration.
+
+
+=> standalone apps will be package as jar file..  (apps which executes from main() method)
+=> web apps will be packages as war file. (war)
+
+to simplifuy java project build process.
+
+
+
+Maven setup in windows.
+===================
+to setup maven in our machine..    
+
+-need java and maven installed.
+-set path for java and maven.
+
+Step 1:  install java, set path for path and JAVA_HOME (in ENV variables)
+
+			path=C:\Program Files\Java\jdk-21.0.11\bin
+
+			JAVA_HOME= C:\Program Files\Java\jdk-21.0.11
+
+			verify:  $ java -version
+
+Step 2: Download maven s/w as zip file & extract zp file.
+
+			https://maven.apache.org/download.cgi
+
+step 3: move maven folder into C drive (optional)
+
+step 4: set path + MAVEN_HOME (into ENV variables)
+
+		path=C:\Program Files\Apache\Maven\apache-maven-3.9.16\bin
+
+		MAVEN_HOME= C:\Program Files\Apache\Maven\apache-maven-3.9.16
+
+		verify: $ mvn -v
+
+=>Maven Terminology.
+==================
+
+1. Archetype :  Type of project which we want to create using maven
+
+		quick-start : stand-alone apps
+		web-app: web apps
+
+2. groupId:  it represent company name (which org developing this project)
+
+	eg.  in.dna, in.infe, com.google
+
+3. artifactId:  project name
+
+4. version.  current version of your project.
+
+ 		-SNAPSHOT  (under developemtnent /beta)
+ 		-RELEASE	(production release)
+
+5. package ::  jar/war
+
+6. Goals:  Goals are used to perform project build process.
+
+	-clean  : delete the target folder
+	-install
+	-package
+	-deploy
+	-test
+	-validate
+	-compile -  compile source code and genrate .class files in target folder
+
+7. Dependencies:  libraries/jar required for project development.
+
+8. Repositories:  Localtion where jars are stored.
+
+	Central Repo
+	Remote Repo
+	Local Repo
+
+9. POM.xml
+
+	Project Object Model.   it is xml file (maven project config file)
+
+10. plugins.   it is an extension that does actual work during build.
+
+			- maven-clean-plugin 	: deletes target folder
+			- maven-compiler-plugin : compiles java code	
+			- maven-surefire-plugin : run junit test cases
+			- maven-jar-plugin 		: create jar file
+			- maven-war-plugin		: create war file	
+
+
+Remaining topics:
+
+
+
+Working with Maven projects.
+Maven project creation.
+  using CLI
+  using IDE
+Maven commands/Goals
+Maven dependencies
+Maven repositories
