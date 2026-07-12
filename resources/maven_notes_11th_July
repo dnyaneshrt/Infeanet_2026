@@ -140,14 +140,71 @@ step 4: set path + MAVEN_HOME (into ENV variables)
 			- maven-war-plugin		: create war file	
 
 
-Remaining topics:
-
-
+Remaining topics: 12th_July_2026
+=========================
 
 Working with Maven projects.
+======================
 Maven project creation.
   using CLI
   using IDE
-Maven commands/Goals
+
+Step 1. Using CLI.  cmd
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+mvn archetype:generate -DgroupId=com.infe.My-Maven-DNA-App -DartifactId=My-Maven-DNA-App -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
+
+
+maven goals/ commands:
+===================
+
+1. mvn clean:  deletes target directory.
+
+2. mvn compile: compile java code and create target folder with .class files(Byte code)
+
+3. mvn test
+
+4. mvn package: create jar file/ war file
+
+5. mvn install
+
+mvn package:  compile+test+package
+
+mvn install: compile+test+package+install
+
+
+
+
 Maven dependencies
-Maven repositories
+================
+=>libraries required to develope our java applications are called as Maven depdencnies.
+
+	-spring-core
+	-hibernate
+	-junit
+	-aws
+	-log4j
+
+	=> we need to add requied depdecnies in maven pom.xml file
+
+	=>whenever we add depedncies in pom.xml file, then maven will download those files and will add to projetc build path.
+
+	=?Maven deps we can fin in below website.
+
+	https://mvnrepository.com/
+
+
+	Maven repo:
+	=============
+	-location where all store jars/deps are stored.
+
+	1. central repo. (public)
+
+	2. remote repo. (private --nexus/jfrog)
+
+	3. local repo (local machine .m2 folder)
+
+
+	Spring Data JPA:
+	--------------------
